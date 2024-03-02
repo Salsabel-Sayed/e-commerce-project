@@ -29,15 +29,19 @@ function NewPassword() {
      }
     localStorage.setItem("token",res.data.token);
     // setToken(res.data.token)
+    setloading(false)
     nav("/login")
+    
   
   }).catch((err)=>{
     console.log("err repass",err);
     toast.error(`${err.message}`,{duration:1500,position:"top-center",style: {
       background: 'red',color:"white"
     }});
+    setloading(false)
+    
   })
-  setloading(false)
+  
   
   }
   return (
@@ -64,9 +68,10 @@ function NewPassword() {
                   placeholder="enter your new password"
                   type="password"
                 />
+                
                 <button onClick={resetPassword}  type="submit" className="btn btn-success">
-                {loading?<div className="d-flex vh-100 bg-success bg-opacity-50 justify-content-center align-items-center ">
-               <FallingLines color="white" width="100" visible={true} ariaLabel="falling-circles-loading"/></div>:"confirm"}
+                {loading ? <div className="d-flex bg-success bg-opacity-50 justify-content-center align-items-center ">
+               <FallingLines color="white" width="25" visible={true} ariaLabel="falling-circles-loading"/></div>:"confirm"}
               </button>
               </div>
               

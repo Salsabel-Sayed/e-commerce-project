@@ -20,6 +20,7 @@ function CodeVerfiy() {
       toast.success(`${res.data.status}`,{duration:1500,position:"top-center",style: {
         background: 'green',color:"white"
       }});
+      setloading(false)
       nav("/newPassword")
      }
   }).catch((err)=>{
@@ -29,8 +30,9 @@ function CodeVerfiy() {
           background: 'red',color:"white"
         }});
        }
+       setloading(false)
   })
-  setloading(false)
+ 
   
   }
   return (
@@ -52,8 +54,8 @@ function CodeVerfiy() {
                 
                 type="submit"
                 className="btn btn-success">
-                {loading?<div className="d-flex vh-100 bg-success bg-opacity-50 justify-content-center align-items-center ">
-               <FallingLines color="white" width="100" visible={true} ariaLabel="falling-circles-loading"/></div>:"confirm"}
+                {loading?<div className="d-flex bg-success bg-opacity-50 justify-content-center align-items-center ">
+               <FallingLines color="white" width="25" visible={true} ariaLabel="falling-circles-loading"/></div>:"confirm"}
               </button>
               </div>            
             </div>

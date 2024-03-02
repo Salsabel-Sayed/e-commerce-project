@@ -97,9 +97,10 @@ function LogIn() {
                         <label htmlFor='password'>password:</label>
                         <input onBlur={myFormik.handleBlur} onChange={myFormik.handleChange} className="form-control mb-4" type="password"  id='password' placeholder=" enter your password..."/>
                         {myFormik.errors.password && myFormik.touched.password ? <div className=" alert alert-danger">{myFormik.errors.password}</div> :""}
+
                            <button type="submit" className="btn btnSubmit">
                             {loading ? <div className="d-flex bg-success bg-opacity-50 justify-content-center align-items-center ">
-               <FallingLines color="white" width="100" visible={true} ariaLabel="falling-circles-loading"/></div> :"login"}
+               <FallingLines color="white" width="25" visible={true} ariaLabel="falling-circles-loading"/></div> :"login"}
                            </button>
                            <Link to="/forgetpassWord"><span className="frgtPass" >forget password ?</span></Link>
                     </Form>

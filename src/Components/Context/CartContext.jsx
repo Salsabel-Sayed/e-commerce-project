@@ -147,7 +147,7 @@ function deleteFavHeart(id){
       }
     }).then((res)=>{
       // console.log("delt res", res);
-      setnumOfCartItem(res.data.data.numOfCartItems)
+      setnumOfCartItem(res.data.numOfCartItems)
       // console.log("deleteCart",res.data.numOfCartItems);
       settotalCartPrice(res.data.data.totalCartPrice)
       setAllProducts(res.data.data.products)

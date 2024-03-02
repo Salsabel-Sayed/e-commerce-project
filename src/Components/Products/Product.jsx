@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { FallingLines } from "react-loader-spinner";
 
 
 function Product({ product }) {
@@ -12,6 +13,7 @@ function Product({ product }) {
     wishList,
   } = useContext(cartContext);
   const [isHearted, setIsHearted] = useState(false);
+  const [loading,setLoading]=useState(false);
  
   async function handleHeart(id) {
     await favHeart(id);
@@ -23,6 +25,7 @@ function Product({ product }) {
     setIsHearted(false);
   }
   async function addFromProductToCart(productsId) {
+    setLoading(true)
     let resCart = await addToCart(productsId);
     if (resCart.data.status === "success") {
       toast.success("Successfully created!", {
@@ -36,6 +39,7 @@ function Product({ product }) {
         background: 'red',color:"white"
       } });
     }
+    setLoading(false)
   }
   useEffect(()=>{
     for( let i=0; i<wishList?.data?.length; i++){
@@ -79,11 +83,13 @@ function Product({ product }) {
             </div>
           </div>
         </Link>
+        
         <button
           onClick={() => addFromProductToCart(product.id)}
           className="btn btn-success form-control"
           type="submit">
-          add to cart
+          {loading? <div className="d-flex bg-success bg-opacity-50 justify-content-center align-items-center ">
+               <FallingLines color="white" width="25" visible={true} ariaLabel="falling-circles-loading"/></div> :"add to cart"}
         </button>
        </div>
       </div>

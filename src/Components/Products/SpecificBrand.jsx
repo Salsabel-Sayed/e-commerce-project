@@ -28,7 +28,7 @@ function SpecificBrand() {
     <section className='brandSpecific'>
         <div className="container">
             <div className="row g-4">
-                {getBrand?.data.map((brand,indx)=>(<div key={indx} className="col-6 ">
+                {getBrand?.data.map((brand,indx)=>(<div key={indx} className="col-xl-6">
                     <div className="oneBrand d-flex justify-content-around align-items-center">
                         <img src={brand?.imageCover} alt="" />
                         <h4 className='text-center'>{brand?.title}</h4>
