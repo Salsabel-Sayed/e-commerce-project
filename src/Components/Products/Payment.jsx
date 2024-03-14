@@ -73,7 +73,7 @@ function Payment() {
                 token:localStorage.getItem("token")
             },
             params:{
-                url:"http://localhost:3000/#"
+                url:"https://e-commerce-project-ruddy.vercel.app/#"
             }
         }
 
