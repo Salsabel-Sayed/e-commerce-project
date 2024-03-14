@@ -53,13 +53,7 @@ function Categories() {
             </div>
    </>
 }
- const settingsspecific = {
-   focusOnSelect: true,
-   infinite: true,
-   slidesToShow: 6,
-   slidesToScroll: 1,
-   speed: 500
- }
+
 
 
   return (

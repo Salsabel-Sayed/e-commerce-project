@@ -73,7 +73,7 @@ function Payment() {
                 token:localStorage.getItem("token")
             },
             params:{
-                url:"http://localhost:3000"
+                url:"http://localhost:3000/#"
             }
         }
 

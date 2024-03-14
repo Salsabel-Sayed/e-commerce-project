@@ -33,6 +33,7 @@ function LogIn() {
                 console.log("token",res.data.token);
                 localStorage.setItem("token", res.data.token);
                 setToken(res.data.token)
+              
 
 
                 setSuccess(true);

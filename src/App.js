@@ -32,7 +32,7 @@ import CodeVerfiy from './Components/LogInOut/CodeVerfiy';
 
 const myRouter = createHashRouter([
   {
-    path: "/",
+    path: "",
     element: <LayOuts />,
     children: [
       { index: true, element: <Home /> },
