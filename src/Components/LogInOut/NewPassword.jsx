@@ -46,7 +46,7 @@ function NewPassword() {
   }
   return (
     <>
-    <section>
+    <section className='newPass'>
         <div className="container">
             <div className="row">
             <div className="col-12">

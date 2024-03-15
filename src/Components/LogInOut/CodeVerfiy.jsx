@@ -24,20 +24,19 @@ function CodeVerfiy() {
       nav("/newPassword")
      }
   }).catch((err)=>{
-    console.log("code err",err);
-      {
-        toast.error(`${err.message}`,{duration:1500,position:"top-center",style: {
-          background: 'red',color:"white"
-        }});
-       }
-       setloading(false)
+    console.log("err repass",err);
+    toast.error(`${err.message}`,{duration:1500,position:"top-center",style: {
+      background: 'red',color:"white"
+    }});
+    setloading(false)
+    
   })
- 
+  
   
   }
   return (
     <>   
-    <section>
+    <section className='codeVerfiy'>
         <div className="container">
             <div className="row">
             <div className="col-12">

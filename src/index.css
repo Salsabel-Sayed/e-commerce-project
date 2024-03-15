@@ -272,7 +272,7 @@ body {
 }
 /* ! forgetSection */
 
-.forgetSection .forgetpass{
+.forgetSection .forgetpass, .codeVerfiy .forgetpass,.newPass .forgetpass{
   border: 1px solid green;
   padding: 10px;
   border-radius: var(--borderRadios);
@@ -280,6 +280,7 @@ body {
   margin-block:20px;
 
 }
+
 .navbar{
   box-shadow: 0 0 34px -15px;
 }
@@ -373,57 +374,6 @@ a , a:hover{
 {
     background-color: var(--light-color) !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  <NavItem>
-              <Link className='nav-link' to="/home">home</Link>
-            </NavItem>
-            <NavItem>
-              <Link className='nav-link' to="/cart">cart</Link>
-            </NavItem>
-            <NavItem>
-              <Link className='nav-link' to="/products/">products</Link>
-            </NavItem>
-            <NavItem>
-              <Link className='nav-link' to="/categories">categories</Link>
-            </NavItem>
-            <NavItem>
-              <Link className='nav-link' to="/brand">brand</Link>
-            </NavItem>          
-          </Nav>
-          <Nav className="ms-auto" navbar >
-            <NavItem  >
-              <Link className='nav-link register' to="/register">register</Link>
-            </NavItem>
-            <NavItem  >
-              <Link className=" nav-link logOut" to="/logOut">log out</Link>
-            </NavItem>
-            </Nav>
-        </Collapse>
-      </Navbar> */
-
-
-
-
-
-
-
-
 
 
 

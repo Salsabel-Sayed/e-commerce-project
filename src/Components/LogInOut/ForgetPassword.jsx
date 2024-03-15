@@ -18,7 +18,7 @@ function ForgetPassword() {
     {
         "email": email
     }).then((res)=>{
-      console.log("rewriteEmail" , res);
+     
       if(res.data.statusMsg === "success" ){
         toast.success(`${res.data.message}`,{duration:1500,position:"top-center",style: {
           background: 'green',color:"white"
@@ -28,21 +28,21 @@ function ForgetPassword() {
         
         
        }
-    }).catch((err)=>{
+    }).catch((err) => {
       console.log("reww", err);
-      if(err.response.data.statusMsg == "fail"){
-        {
-          toast.error(`${err.response.data.message}`,{duration:1500,position:"top-center",style: {
-            background: 'red',color:"white"
-          }});
-         }
+      if (err.response.data.statusMsg === "fail") {
+          toast.error(`${err.response.data.message}`, {
+              duration: 1500,
+              position: "top-center",
+              style: {
+                  background: "red",
+                  color: "white",
+              },
+          });
       }
-      setLoading(false)
-    })
-    
-  
-  }
-  
+      setLoading(false);
+  });
+}
   
   
  
