@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'reactstrap';
 import { Formik, useFormik } from 'formik';
 import axios from 'axios';
-import { Hearts } from 'react-loader-spinner';
+import { FallingLines} from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -123,7 +123,8 @@ function SignUp() {
                         {myFormik.errors.phone && myFormik.touched.phone ? <div className=" alert alert-danger">{myFormik.errors.phone}</div> :""}
                          
                            <button type="submit" className="btn btnSubmit">
-                            {loading ? <Hearts height="80" width="80" color="red" ariaLabel="hearts-loading" visible={true}/> :"register"}
+                            {loading ? <div className="d-flex bg-success bg-opacity-50 justify-content-center align-items-center ">
+               <FallingLines color="white" width="25" visible={true} ariaLabel="falling-circles-loading"/></div> :"register"}
                            </button>
                         
 
