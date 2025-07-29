@@ -18,6 +18,6 @@ This is a frontend-only e-commerce project built using **React.js** that consume
 | Area      | Technology         |
 |-----------|--------------------|
 | Frontend  | React.js           |
-| Styling   | CSS  / Bootstrap (depending on project version) |
+| Styling   | CSS  / Bootstrap |
 | API       | Public E-Commerce API (e.g., fakestoreapi.com) |
 | Tools     | React Router, Axios |
